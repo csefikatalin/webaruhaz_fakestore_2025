@@ -1,23 +1,22 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Kosar from './components/public/Kosar';
+import Cards from './components/public/Cards';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+       
+       <h1>Webáruház</h1>
       </header>
+      <aside>
+        <Kosar />
+      </aside>
+      <article className='container'>
+        <Cards />
+      </article>
+      <footer>Készítette:Gipsz Jakab</footer>
     </div>
   );
 }
