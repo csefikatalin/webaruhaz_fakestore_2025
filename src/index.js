@@ -4,17 +4,17 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.css";
-import { PublicProvider } from "./contexts/PublicContext";
+import { CardProvider } from "./contexts/CardContext";
 import { KosarProvider } from "./contexts/KosarContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <PublicProvider>
+    <CardProvider>
       <KosarProvider>
       <App />
       </KosarProvider>
-    </PublicProvider>
+    </CardProvider>
   </React.StrictMode>
 );
 

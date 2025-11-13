@@ -2,10 +2,10 @@ import { createContext, useContext, useState, useEffect } from "react";
 import axios from "axios";
 
 // Kontextus létrehozása
-export const PublicContext = createContext();
+export const CardContext = createContext();
 
 //  Provider komponens
-export const PublicProvider = ({ children }) => {
+export const CardProvider = ({ children }) => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -43,11 +43,11 @@ export const PublicProvider = ({ children }) => {
 
   //  Provider visszaadása
   return (
-    <PublicContext.Provider
+    <CardContext.Provider
       value={{ data, kedvenc }}
     >
       {children}
-    </PublicContext.Provider>
+    </CardContext.Provider>
   );
 };
 

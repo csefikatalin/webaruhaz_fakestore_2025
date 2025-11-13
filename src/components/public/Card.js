@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
-import { PublicContext } from "../../contexts/PublicContext";
+import { CardContext } from "../../contexts/CardContext";
 import { KosarContext } from "../../contexts/KosarContext";
 
 export default function Card(props) {
-  const { kedvenc}=useContext(PublicContext)
+  const { kedvenc}=useContext(CardContext)
   const {kosarba}=useContext(KosarContext)
   return (
     <div className="card " style={{ flex: "1 0 200px" }}>
