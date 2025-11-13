@@ -1,8 +1,10 @@
 import React, { useContext } from "react";
 import { PublicContext } from "../../contexts/PublicContext";
+import { KosarContext } from "../../contexts/KosarContext";
 
 export default function Card(props) {
-  const {kosarba, kedvenc}=useContext(PublicContext)
+  const { kedvenc}=useContext(PublicContext)
+  const {kosarba}=useContext(KosarContext)
   return (
     <div className="card " style={{ flex: "1 0 200px" }}>
       <div style={{ height: "300px", overflow: "hidden" }}>

@@ -1,21 +1,25 @@
+import "./App.css";
+import Kosar from "./components/public/Kosar";
+import Cards from "./components/public/Cards";
 
-import './App.css';
-import Kosar from './components/public/Kosar';
-import Cards from './components/public/Cards';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App row ">
       <header className="App-header">
-       
-       <h1>Webáruház</h1>
+        <h1>Webáruház</h1>
       </header>
-      <aside>
-        <Kosar />
-      </aside>
-      <article className='container'>
-        <Cards />
+
+      <article className="container col-lg-8 col-md-6 p-5 ">
+       
+            <Cards />
+         
       </article>
+      <aside className="col-lg-4 col-md-6 p-5">
+      
+          <Kosar />
+       
+      </aside>
       <footer>Készítette:Gipsz Jakab</footer>
     </div>
   );

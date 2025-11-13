@@ -9,7 +9,6 @@ export const PublicProvider = ({ children }) => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const [kosar,setKosar]=useState([])
 
 
   function getProducts() {
@@ -33,22 +32,22 @@ export const PublicProvider = ({ children }) => {
   }, []);
 
 
-  function kosarba(adat){
-    console.log(adat)
-    const sv=[...kosar]
-    sv.push(adat)
-    setKosar([...sv])
-  }
-  function kedvenc(adat){
+
+  function kedvenc(adat) {
     setData((prevData) =>
-    prevData.map((item) =>
-      item.id === adat.id ? { ...item, kedvenc: !item.kedvenc } : item
-    )
-  );
+      prevData.map((item) =>
+        item.id === adat.id ? { ...item, kedvenc: !item.kedvenc } : item
+      )
+    );
   }
+
   //  Provider visszaadása
   return (
-    <PublicContext.Provider value={{ data,kosarba,kedvenc }}>{children}</PublicContext.Provider>
+    <PublicContext.Provider
+      value={{ data, kedvenc }}
+    >
+      {children}
+    </PublicContext.Provider>
   );
 };
 
